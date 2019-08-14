@@ -1,2 +1,2 @@
 /cm_env
-/au_etri/cognition_model/__pycache__
+*.pyc
