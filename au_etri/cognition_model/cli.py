@@ -1,6 +1,5 @@
 import click
 import ml_classifier
-import ml_baseline
 from sklearn.tree import DecisionTreeClassifier as DT
 from sklearn.ensemble import RandomForestClassifier as RF, AdaBoostClassifier as AB, \
 							 GradientBoostingClassifier as GB
