@@ -1,0 +1,3 @@
+#Install your local copy into a virtualenv. This is how you set up your repo for local run or development
+pip install virtualenv
+python -m virtualenv env
