@@ -1,5 +1,5 @@
 import click
-import ml_classifier
+import cm_baseline_v3
 from sklearn.tree import DecisionTreeClassifier as DT
 from sklearn.ensemble import RandomForestClassifier as RF, AdaBoostClassifier as AB, \
 							 GradientBoostingClassifier as GB
@@ -11,17 +11,18 @@ from sklearn import svm
 
 def choose_model(model):
 	if model == '1':
-	 	ml_classifier.main(RF(n_estimators=100))
+	 	cm_baseline_v3.main(RF(n_estimators=100))
 	elif model == '2':
-		ml_classifier.main(DT())
+		cm_baseline_v3.main(DT())
 	elif model == '3':
-		ml_classifier.main(GB())
+		cm_baseline_v3.main(GB())
 	elif model == '4':
-		ml_classifier.main(LR(solver='lbfgs', C=1, multi_class='auto'))
+		cm_baseline_v3.main(LR(solver='liblinear', C=1, max_iter = 500, multi_class='auto'))
 	elif model == '5':
-		ml_classifier.main(AB())
+		cm_baseline_v3.main(AB())
 	elif model == '6':
-		ml_classifier.main(svm.SVC(gamma='auto'))
-
+		cm_baseline_v3.main(svm.SVC(gamma='auto'))
+	else:
+		print('Please choose a integer between 1 and 6')
 if __name__ == '__main__':
     choose_model()

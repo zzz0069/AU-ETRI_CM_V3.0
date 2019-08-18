@@ -1,5 +1,5 @@
 '''
-Program to read Data from the files
+Program to read Data from the .csv files
 '''
 import numpy as np
 
@@ -22,7 +22,3 @@ def readfile(filename, mode = False):
 	data = np.array(data)
 	labels = np.array(labels)
 	return data, labels
-
-# x, y = readFile('au_can_dataset.csv')
-# print('x=', x)
-# print('y=', y)
